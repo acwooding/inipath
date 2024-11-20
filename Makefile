@@ -2,13 +2,13 @@
 
 CONDA_EXE ?= ~/anaconda3/bin/conda
 PYTHON = python3
-PACKAGE_NAME = conda-ops
-WHEEL_NAME = conda_ops
+PACKAGE_NAME = inipath
+WHEEL_NAME = inipath
 DIST_DIR = dist
 PYTEST_CMD = pytest
-TEST_ENV = conda-ops-test-env
+TEST_ENV = test_inipath
 DIST_FILES = $(DIST_DIR)/$(PACKAGE_NAME)-*.tar.gz $(DIST_DIR)/$(WHEEL_NAME)-*.whl
-VERSION = "0.4a2"
+VERSION = "0.1a1"
 
 .PHONY: local-test
 ## Build, install and test locally
