@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inipath"
+version = "0.1a1"
+authors = [
+  { name="Amy Wooding", email="amy@wooding.org" },
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+description = "Manage your local paths and keep them out of your python-based Jupyter notebooks."
+requires-python = ">=3.7"
+
+[project.scripts]
+inipath = "inipath.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/acwooding/inipath"
+"Bug Tracker" = "https://github.com/acwooding/inipath/issues"
+
+[project.optional-dependencies]
+test = ["pytest>=6.0", "coverage", "pytest-mock"]
+linting = ["black", "flake8", "pylint"]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --doctest-continue-on-failure"
+testpaths = ["tests"]
